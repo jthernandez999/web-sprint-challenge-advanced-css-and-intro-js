@@ -229,9 +229,10 @@ console.log(artists[8].name)
  
  Example, if getArtistByIndex is invoked with the artists array and the number 0, it will return `the artist at index 0 is Amedeo Modigliani` */
 
-function getArtistByIndex(/*Your Code Here*/) {
-  /*Your Code Here*/
+function getArtistByIndex(artists, number) {
+  return  "the artist at index " + artists[number].id + " is " + artists[number].name
 }  
+console.log(getArtistByIndex[0, 0])
 
 
 
@@ -239,14 +240,15 @@ function getArtistByIndex(/*Your Code Here*/) {
 Use get20s to do the following: 
 1. Receive an array
 2. Return a new array with names of artists who were born in and died in 20th century (1900-2000) 
-
 Example born in 1901 and died in 1959 - included -- born in 1889 and died in 1925 not included
 If correct, the function should return ["Salvador Dali", "Frida Kahlo"]*/
 
-function get20s(/*Your Code Here*/){
-  /*Your Code Here*/
-}
-
+function get20s(artists, years){
+  
+   if (artists.years >= 1900 && artists.years <= 2000)
+   console.log(artists.name)
+}    
+console.log(get20s)
 
 
 /* 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 5: 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 
@@ -258,10 +260,17 @@ function get20s(/*Your Code Here*/){
  
  For example, if removeArtist is invoked with the artists array and the number 0, it will remove Amedeo Modigliani from our dataset and return the number 19. */
 
-function removeArtist(/*Your Code Here*/){
-   /*Your Code Here*/
+function removeArtist(artists, number){
+   let newArray = []
+     for (let i = 0; i < artists.length; i++){
+       if (artists[i]!==number){
+         newArray.push(artists[i])
+      
+       }
+     }
+     return newArray.length
 }
-   
+   console.log(removeArtist[0, 0])
 
 /* 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 6: 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 
 Use addArtist to do the following: 
@@ -279,10 +288,19 @@ Use addArtist to do the following:
 
 Example: addArtist(artists) should return the artists array with the above object added to the end of the array. */
 
-function addArtist(/*Your Code Here*/){
-    /*Your Code Here*/
+function addArtist(artists){
+    artists.push(
+      {
+      "id": 20,
+      "name": "Joe T. Hernandez", 
+      "years": "July, 03, 1987",
+      "genre": "Web Design", 
+      "nationality": "US citizen",
+      "bio": "lorem ipsum",
+    })
+    return artists
   }
-
+  console.log(addArtist)
   
 
 /* 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 7: 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀
