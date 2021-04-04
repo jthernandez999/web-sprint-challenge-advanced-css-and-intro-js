@@ -262,7 +262,7 @@ console.log(get20s)
 
 function removeArtist(artists, number){
    let newArray = []
-     for (let i = 0; i < artists.length; i++){
+     for (let i = 1; i < artists.length; i++){
        if (artists[i]!==number){
          newArray.push(artists[i])
       
