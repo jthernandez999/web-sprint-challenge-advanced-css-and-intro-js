@@ -243,14 +243,17 @@ Use get20s to do the following:
 Example born in 1901 and died in 1959 - included -- born in 1889 and died in 1925 not included
 If correct, the function should return ["Salvador Dali", "Frida Kahlo"]*/
 
-function get20s(artists){
-  
-   if (artists.years >= 1900 && artists.years <= 2000){
-     console.log(artists.name)
+function get20s(artists, name){
+   let newArray = []
+   for (let i = 0; i < artists.length; i++) {
+    if (artists[i].years >= 1900 && artists[i].years <= 2000) {
+      newArray.push(artists[i].name);
+    }
    }
-   
+   return newArray 
 }    
-console.log(get20s)
+console.log(get20s(artists))
+
 
 
 /* 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 5: 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 
