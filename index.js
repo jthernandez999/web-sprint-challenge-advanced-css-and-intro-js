@@ -243,10 +243,12 @@ Use get20s to do the following:
 Example born in 1901 and died in 1959 - included -- born in 1889 and died in 1925 not included
 If correct, the function should return ["Salvador Dali", "Frida Kahlo"]*/
 
-function get20s(artists, years){
+function get20s(artists){
   
-   if (artists.years >= 1900 && artists.years <= 2000)
-   console.log(artists.name)
+   if (artists.years >= 1900 && artists.years <= 2000){
+     console.log(artists.name)
+   }
+   
 }    
 console.log(get20s)
 
@@ -293,10 +295,10 @@ function addArtist(artists){
       {
       "id": 20,
       "name": "Joe T. Hernandez", 
-      "years": "July, 03, 1987",
+      "years": "1987 - current day",
       "genre": "Web Design", 
       "nationality": "US citizen",
-      "bio": "lorem ipsum",
+      "bio": "lorem ipsum"
     })
     return artists
   }
@@ -310,11 +312,16 @@ Use lotsOfArt to do the following:
 
 For example lotsOfArt(artists); will return ["Amedeo Modigliani", "Rene Magritte", ... "Albrecht Dürer"]*/
 
-function lotsOfArt(/*Your Code Here*/){
-  /*Your Code Here*/
+function lotsOfArt(artists, name){
+    let newArray = []
+    for (let i = 0; i < artists.length; i++) {
+      if (artists[i].paintings >= 100) {
+        newArray.push(artists[i].name);
+      }
+    }
+    return newArray
 }
-
-
+console.log(lotsOfArt(artists))
 
 
 // 🎨🎨 STRETCH 🎨🎨//
